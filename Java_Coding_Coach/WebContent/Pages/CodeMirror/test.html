@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test CodeMirror</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="lib/codemirror.css">
+        <script src="lib/codemirror.js"></script>
+        <!-- chosen theme stylesheet -->
+
+        <link rel="stylesheet" href="theme/cobalt.css">
+        <script src="mode/clike/clike.js"></script>
+        <script src="mode/xml/xml.js"></script>
+    </head>
+    <body>
+      
+            <!-- Some random JS code placed in the textarea for demo purposes -->
+            <textarea id="code" name="code"></textarea>
+
+
+
+        <script>
+            window.onload = function() {
+                window.editor = CodeMirror.fromTextArea(code, {
+                    mode: "text/x-java",
+                    lineNumbers: true,
+                    lineWrapping: true,
+                    theme : 'cobalt'
+                });
+            };
+        </script>
+    </body>
+</html>

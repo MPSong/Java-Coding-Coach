@@ -14,7 +14,6 @@
 </head>
 <body>
 	<form style="width: 500px;">
-		<!-- Some random JS code placed in the textarea for demo purposes -->
 		<textarea id="code" name="code"></textarea>
 
 	</form>

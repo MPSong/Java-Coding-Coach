@@ -1,7 +1,7 @@
 package PaperClip;
 
 public class PaperClip {
-	private String[] message;
+	private String[] message;  //message table을 만들어 처리
 	
 	public PaperClip(){
 		
