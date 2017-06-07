@@ -59,7 +59,7 @@
 			<div class="sidebar-nav navbar-collapse">
 				<ul class="nav" id="side-menu">
 					<li><a class="Stack" href="Stack_Info.jsp">Stack</a></li>
-					<li><a href="#"><i class="fa fa-edit fa-fw"></i> Stack 이란?</a>
+					<li><a href="Stack_Info.jsp"><i class="fa fa-edit fa-fw"></i> Stack 이란?</a>
 					</li>
 					<li><a href="#"><i class="fa fa-edit fa-fw"></i>학 습<span
 							class="fa arrow"></span></a>
@@ -119,13 +119,28 @@
 									};
 								</script>
 								<div class="panel-footer">
-								<!--  제출할 컴파일 결과 구현해야함 -->
-									<button type="button" class="btn btn-success"><i class=" fa fa-save fa-fw"></i>제출하기</button>
+									<!--  제출할 컴파일 결과 구현해야함 -->
+									<button type="button" class="btn btn-success">
+										<i class=" fa fa-save fa-fw"></i>제출하기
+									</button>
 								</div>
-								
+
 							</div>
-							
+
 						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<i class="fa fa-paperclip fa-fw"></i> Paper Clip
+							</div>
+							<div class="panel-body">temp</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-8">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<i class="fa fa-edit fa-fw"></i>컴파일 화면
@@ -134,68 +149,15 @@
 								<textarea>temp</textarea>
 							</div>
 						</div>
-
-						<div class="col-lg-4 col-sm-offset-12">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<i class="fa fa-bell fa-fw"></i> Notifications Panel
-								</div>
-								<div class="panel-body">
-									<div class="list-group">
-										<a href="#" class="list-group-item"> <i
-											class="fa fa-comment fa-fw"></i> New Comment <span
-											class="pull-right text-muted small"><em>4 minutes
-													ago</em> </span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-twitter fa-fw"></i> 3 New Followers <span
-											class="pull-right text-muted small"><em>12
-													minutes ago</em> </span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-envelope fa-fw"></i> Message Sent <span
-											class="pull-right text-muted small"><em>27
-													minutes ago</em> </span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-tasks fa-fw"></i> New Task <span
-											class="pull-right text-muted small"><em>43
-													minutes ago</em> </span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-upload fa-fw"></i> Server Rebooted <span
-											class="pull-right text-muted small"><em>11:32 AM</em>
-										</span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-bolt fa-fw"></i> Server Crashed! <span
-											class="pull-right text-muted small"><em>11:13 AM</em>
-										</span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-warning fa-fw"></i> Server Not Responding <span
-											class="pull-right text-muted small"><em>10:57 AM</em>
-										</span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-shopping-cart fa-fw"></i> New Order Placed <span
-											class="pull-right text-muted small"><em>9:49 AM</em> </span>
-										</a> <a href="#" class="list-group-item"> <i
-											class="fa fa-money fa-fw"></i> Payment Received <span
-											class="pull-right text-muted small"><em>Yesterday</em>
-										</span>
-										</a>
-									</div>
-									<!-- /.list-group -->
-									<a href="#" class="btn btn-default btn-block">View All
-										Alerts</a>
-								</div>
-							</div>
-
-
-						</div>
 					</div>
+
+
 				</div>
 			</div>
-			<!-- /.container-fluid -->
 		</div>
-		<!-- /#page-wrapper -->
-
+		<!-- /.container-fluid -->
 	</div>
-	<!-- /#wrapper -->
+	<!-- /#page-wrapper -->
 
 	<!-- jQuery -->
 	<script src="../vendor/jquery/jquery.min.js"></script>
