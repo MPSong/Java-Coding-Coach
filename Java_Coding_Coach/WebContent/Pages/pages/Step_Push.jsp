@@ -106,7 +106,16 @@
 							</div>
 							<div class="panel-body">
 								<!-- Some random JS code placed in the textarea for demo purposes -->
-								<textarea id="code" name="code"></textarea>
+								<textarea id="code" name="code">class Stack{								
+								
+    public static void main(String[] args) {						
+								
+								
+								
+								
+								
+	}							
+}                               </textarea>
 								<script>
 									window.onload = function() {
 										window.editor = CodeMirror
@@ -134,7 +143,7 @@
 							<div class="panel-heading">
 								<i class="fa fa-paperclip fa-fw"></i> Paper Clip
 							</div>
-							<div class="panel-body">temp</div>
+							<div class="panel-body"></div>
 						</div>
 					</div>
 				</div>
@@ -146,7 +155,7 @@
 								<i class="fa fa-edit fa-fw"></i>컴파일 화면
 							</div>
 							<div class="panel-body">
-								<textarea>temp</textarea>
+								<textarea></textarea>
 							</div>
 						</div>
 					</div>

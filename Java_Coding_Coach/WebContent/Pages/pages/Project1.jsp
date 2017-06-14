@@ -107,7 +107,23 @@
 							</div>
 							<div class="panel-body">
 								<!-- Some random JS code placed in the textarea for demo purposes -->
-								<textarea id="code" name="code"></textarea>
+								<textarea id="code" name="code">class Stack{								
+								
+	public void reverseString(String str){
+		
+	
+	
+	
+	
+	
+	}						
+								
+    public static void main(String[] args) {								
+								
+								
+								
+	}							
+}                               </textarea>
 								<script>
 									window.onload = function() {
 										window.editor = CodeMirror
