@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import = "PaperClip.PaperClip" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -107,7 +108,8 @@
 							</div>
 							<div class="panel-body">
 								<!-- Some random JS code placed in the textarea for demo purposes -->
-								<textarea id="code" name="code">class Stack{								
+								
+								<textarea id="code" name="code" >class Test{								
 								
 	public void reverseString(String str){
 		
@@ -124,17 +126,72 @@
 								
 	}							
 }                               </textarea>
+
 								<script>
-									window.onload = function() {
-										window.editor = CodeMirror
-												.fromTextArea(code, {
-													mode : "text/x-java",
-													lineNumbers : true,
-													lineWrapping : true,
-													theme : 'cobalt'
-												});
-									};
+								
+								var texts;
+								var fun = function trans(texts){
+									
+									
+									$.ajax({
+										type:'POST'
+										,url:"Project3.jsp"
+										,data:{"test":texts}
+										,dataType:'text'
+										,success:function(data){
+											data = $.trim(data);
+											$("#clipbody").text(data);
+										}
+										,error:function(data){
+											alert("error");
+										}
+									});
+									
+									
+								};
+								
+								
+								var editor =  CodeMirror
+								.fromTextArea(code, {
+									mode : "text/x-java",
+									lineNumbers : true,
+									lineWrapping : true,
+									
+									theme : 'cobalt'
+								});
+								
+								
+								
+								
+								window.onload = function() {
+									window.editor = editor;
+								
+									
+									
+								};
+								
+								editor.on("keyup",function(cm,e){
+									if(e.keyCode==13){
+										var text = document.getElementById("code");
+										texts = editor.getValue();
+										
+										
+										fun(texts);
+									}
+									
+					
+										
+										
+										
+								} );
+								
+								
+							
+								
+								
+								
 								</script>
+								
 								<div class="panel-footer">
 									<!--  제출할 컴파일 결과 구현해야함 -->
 									<button type="button" class="btn btn-success">
@@ -151,7 +208,7 @@
 							<div class="panel-heading">
 								<i class="fa fa-paperclip fa-fw"></i> Paper Clip
 							</div>
-							<div class="panel-body">temp</div>
+							<div class="panel-body" id="clipbody"></div>
 						</div>
 					</div>
 				</div>

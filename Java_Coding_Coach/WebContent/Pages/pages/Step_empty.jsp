@@ -117,15 +117,59 @@
 	}							
 }                               </textarea>
 								<script>
+								var texts;
+								var fun = function trans(texts){
+									
+									
+									$.ajax({
+										type:'POST'
+										,url:"Project3.jsp"
+										,data:{"test":texts}
+										,dataType:'text'
+										,success:function(data){
+											data = $.trim(data);
+											$("#clipbody").text(data);
+										}
+										,error:function(data){
+											alert("error");
+										}
+									});
+									
+									
+								};
+									var editor =  CodeMirror
+									.fromTextArea(code, {
+										mode : "text/x-java",
+										lineNumbers : true,
+										lineWrapping : true,
+										
+										theme : 'cobalt'
+									});
+									
+									
+									
+									
 									window.onload = function() {
-										window.editor = CodeMirror
-												.fromTextArea(code, {
-													mode : "text/x-java",
-													lineNumbers : true,
-													lineWrapping : true,
-													theme : 'cobalt'
-												});
+										window.editor = editor;
+									
+										
+										
 									};
+									
+									editor.on("keyup",function(cm,e){
+										if(e.keyCode==13){
+											var text = document.getElementById("code");
+											texts = editor.getValue();
+											
+											
+											fun(texts);
+										}
+										
+						
+											
+											
+											
+									} );
 								</script>
 								<div class="panel-footer">
 									<!--  제출할 컴파일 결과 구현해야함 -->
@@ -143,7 +187,7 @@
 							<div class="panel-heading">
 								<i class="fa fa-paperclip fa-fw"></i> Paper Clip
 							</div>
-							<div class="panel-body">temp</div>
+							<div class="panel-body" id ="clipbody"></div>
 						</div>
 					</div>
 				</div>
