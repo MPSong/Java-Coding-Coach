@@ -105,11 +105,12 @@ private void parsingStackType5(String input){
 			if(!(tmptype.equals(""))||idType.equals("int")){
 				stack.get(mat.group(1)).pushMethod("Integer");
 			}
-			else if(idType.equals("String")||(mat.group(3).charAt(0)=='"'&&mat.group(3).charAt(mat.group(3).length()-1)=='"')){
-				stack.get(mat.group(1)).pushMethod("String");
-			}
+			
 			else if(mat.group(2).equals("")&&mat.group(3).equals("")){
 				stack.get(mat.group(1)).pushMethod("");
+			}
+			else if(idType.equals("String")||(mat.group(3).charAt(0)=='"'&&mat.group(3).charAt(mat.group(3).length()-1)=='"')){
+				stack.get(mat.group(1)).pushMethod("String");
 			}
 			else{
 				stack.get(mat.group(1)).pushMethod(mat.group(3));
